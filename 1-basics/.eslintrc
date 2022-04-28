@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "plugin:@kilohealth/typescript",
+    "plugin:@kilohealth/jest",
+    "plugin:@kilohealth/node",
+    "plugin:@kilohealth/prettier"
+  ],
+  "rules": {
+    "prettier/prettier": ["error", {"singleQuote": true}],
+    "no-warning-comments": "off"
+  }
+}
