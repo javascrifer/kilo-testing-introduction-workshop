@@ -1,15 +1,9 @@
 import { render, screen } from '@testing-library/react';
 
-import Home from '@/pages/index';
+import HomePage from '@/pages/index';
 
-describe('Home', () => {
-  it('renders a heading', () => {
-    render(<Home />);
-
-    const heading = screen.getByRole('heading', {
-      name: /welcome to next\.js!/i,
-    });
-
-    expect(heading).toBeInTheDocument();
-  });
+describe('<HomePage />', () => {
+  it.todo(
+    'reports to analytics service that user has subscribed to newsletter'
+  );
 });

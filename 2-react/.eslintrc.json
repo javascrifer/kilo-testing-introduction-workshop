@@ -9,7 +9,7 @@
   "rules": {
     "no-warning-comments": "off",
     "react/react-in-jsx-scope": "off",
-    "prettier/prettier": ["error", {"singleQuote": true}],
+    "prettier/prettier": ["error", { "singleQuote": true }],
     "@kilohealth/jsx-no-hardcoded-content": "off",
     "@kilohealth/jsx-no-complex-expressions": "off",
     "@kilohealth/jsx-prefer-fragment-wrappers": "off"
