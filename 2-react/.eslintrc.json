@@ -1,0 +1,23 @@
+{
+  "extends": [
+    "plugin:@kilohealth/typescript",
+    "plugin:@kilohealth/react",
+    "plugin:@kilohealth/node",
+    "plugin:@next/next/recommended",
+    "plugin:@kilohealth/prettier"
+  ],
+  "rules": {
+    "no-warning-comments": "off",
+    "react/react-in-jsx-scope": "off",
+    "prettier/prettier": ["error", { "singleQuote": true }],
+    "@kilohealth/jsx-no-hardcoded-content": "off",
+    "@kilohealth/jsx-no-complex-expressions": "off",
+    "@kilohealth/jsx-prefer-fragment-wrappers": "off"
+  },
+  "overrides": [
+    {
+      "files": ["src/**/*.[jt]s?(x)"],
+      "extends": ["plugin:@kilohealth/jest"]
+    }
+  ]
+}
