@@ -2,6 +2,12 @@
 
 Sometimes your code may have a dependency on code in order to fullfil the requirements. As you may already guess things are not that straight forward.
 
+## What is Jest mock functions?
+Jest functions are functions which helps you to write test. It allows you to:
+1. Check function is called.
+2. Check with which arguments function where called.
+3. Return specific value when function is executed.
+
 ## What is wrong with UserServiceBad?
 Lets check `user-service-bad.ts` file and take some time to think what is wrong in the given implementation of the UserService?
 
