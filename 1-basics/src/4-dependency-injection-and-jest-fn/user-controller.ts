@@ -1,12 +1,11 @@
-import { User } from './types';
-import { UserService } from './user-service';
+import { User, UserServiceInterface } from './types';
 
 interface UserController {
   getUser: (id: string) => Promise<User>;
 }
 
 export const getUserController = (
-  userService: UserService
+  userService: UserServiceInterface
 ): UserController => ({
   getUser: (id: string) => userService.fetchUser(id),
 });
