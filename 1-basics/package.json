@@ -6,6 +6,9 @@
   "scripts": {
     "test": "jest --watch"
   },
+  "engines": {
+    "node": "16"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
