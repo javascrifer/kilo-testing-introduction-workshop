@@ -3,13 +3,19 @@ export interface QueryParams {
 }
 
 function buildQuery(queryParams: QueryParams) {
-  return Object.entries(queryParams)
-    .map(([key, value]) => `${key}=${value}`)
-    .join('&');
+  const urlSearchParams = new URLSearchParams();
+
+  for (const [key, value] of Object.entries(queryParams)) {
+    urlSearchParams.append(key, value.toString());
+  }
+
+  return urlSearchParams.toString();
 }
 
 export function buildUrl(baseUrl: string, queryParams?: QueryParams) {
-  const query = Object.keys(queryParams).length ? buildQuery(queryParams) : '';
+  const query = Object.keys(queryParams ?? {}).length
+    ? buildQuery(queryParams)
+    : '';
 
-  return query ? `${baseUrl}?${queryParams}` : baseUrl;
+  return query ? `${baseUrl}?${query}` : baseUrl;
 }

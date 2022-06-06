@@ -12,11 +12,25 @@ describe('buildUrl', () => {
     origin: 'facebook',
   };
 
-  it.todo('returns base url if query parameters are not passed');
+  it('returns base url if query parameters are not passed', () => {
+    expect(buildUrl('https://www.google.com')).toBe('https://www.google.com');
+  });
 
-  it.todo('returns base url if query parameters object is empty');
+  it('returns base url if query parameters object is empty', () => {
+    expect(buildUrl('https://www.google.com', {})).toBe(
+      'https://www.google.com'
+    );
+  });
 
-  it.todo('adds single query parameter to base url');
+  it('adds single query parameter to base url', () => {
+    expect(buildUrl('https://www.google.com', { fizz: 'buzz' })).toBe(
+      'https://www.google.com?fizz=buzz'
+    );
+  });
 
-  it.todo('adds multiple query parameters to base url');
+  it('adds multiple query parameters to base url', () => {
+    expect(
+      buildUrl('https://www.google.com', { fizz: 'buzz', foo: 'bar' })
+    ).toBe('https://www.google.com?fizz=buzz&foo=bar');
+  });
 });
